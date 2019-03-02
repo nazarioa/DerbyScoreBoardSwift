@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB4C42C1222B3C330024F304 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4C42C0222B3C330024F304 /* AppDelegate.swift */; };
+		EB4C42C3222B3C330024F304 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4C42C2222B3C330024F304 /* ViewController.swift */; };
+		EB4C42C6222B3C330024F304 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4C42C4222B3C330024F304 /* Main.storyboard */; };
+		EB4C42C9222B3C330024F304 /* DerbyScoreBoardSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB4C42C7222B3C330024F304 /* DerbyScoreBoardSwift.xcdatamodeld */; };
+		EB4C42CB222B3C350024F304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB4C42CA222B3C350024F304 /* Assets.xcassets */; };
+		EB4C42CE222B3C350024F304 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4C42CC222B3C350024F304 /* LaunchScreen.storyboard */; };
+		EB4C42D9222B3C350024F304 /* DerbyScoreBoardSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4C42D8222B3C350024F304 /* DerbyScoreBoardSwiftTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EB4C42D5222B3C350024F304 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB4C42B5222B3C330024F304 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB4C42BC222B3C330024F304;
+			remoteInfo = DerbyScoreBoardSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EB4C42BD222B3C330024F304 /* DerbyScoreBoardSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DerbyScoreBoardSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB4C42C0222B3C330024F304 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EB4C42C2222B3C330024F304 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB4C42C5222B3C330024F304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EB4C42C8222B3C330024F304 /* DerbyScoreBoardSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DerbyScoreBoardSwift.xcdatamodel; sourceTree = "<group>"; };
+		EB4C42CA222B3C350024F304 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EB4C42CD222B3C350024F304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EB4C42CF222B3C350024F304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB4C42D4222B3C350024F304 /* DerbyScoreBoardSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DerbyScoreBoardSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB4C42D8222B3C350024F304 /* DerbyScoreBoardSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerbyScoreBoardSwiftTests.swift; sourceTree = "<group>"; };
+		EB4C42DA222B3C350024F304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB4C42BA222B3C330024F304 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB4C42D1222B3C350024F304 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB4C42B4222B3C330024F304 = {
+			isa = PBXGroup;
+			children = (
+				EB4C42BF222B3C330024F304 /* DerbyScoreBoardSwift */,
+				EB4C42D7222B3C350024F304 /* DerbyScoreBoardSwiftTests */,
+				EB4C42BE222B3C330024F304 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EB4C42BE222B3C330024F304 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB4C42BD222B3C330024F304 /* DerbyScoreBoardSwift.app */,
+				EB4C42D4222B3C350024F304 /* DerbyScoreBoardSwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB4C42BF222B3C330024F304 /* DerbyScoreBoardSwift */ = {
+			isa = PBXGroup;
+			children = (
+				EB4C42C0222B3C330024F304 /* AppDelegate.swift */,
+				EB4C42C2222B3C330024F304 /* ViewController.swift */,
+				EB4C42C4222B3C330024F304 /* Main.storyboard */,
+				EB4C42CA222B3C350024F304 /* Assets.xcassets */,
+				EB4C42CC222B3C350024F304 /* LaunchScreen.storyboard */,
+				EB4C42CF222B3C350024F304 /* Info.plist */,
+				EB4C42C7222B3C330024F304 /* DerbyScoreBoardSwift.xcdatamodeld */,
+			);
+			path = DerbyScoreBoardSwift;
+			sourceTree = "<group>";
+		};
+		EB4C42D7222B3C350024F304 /* DerbyScoreBoardSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				EB4C42D8222B3C350024F304 /* DerbyScoreBoardSwiftTests.swift */,
+				EB4C42DA222B3C350024F304 /* Info.plist */,
+			);
+			path = DerbyScoreBoardSwiftTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB4C42BC222B3C330024F304 /* DerbyScoreBoardSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB4C42DD222B3C350024F304 /* Build configuration list for PBXNativeTarget "DerbyScoreBoardSwift" */;
+			buildPhases = (
+				EB4C42B9222B3C330024F304 /* Sources */,
+				EB4C42BA222B3C330024F304 /* Frameworks */,
+				EB4C42BB222B3C330024F304 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DerbyScoreBoardSwift;
+			productName = DerbyScoreBoardSwift;
+			productReference = EB4C42BD222B3C330024F304 /* DerbyScoreBoardSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EB4C42D3222B3C350024F304 /* DerbyScoreBoardSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB4C42E0222B3C350024F304 /* Build configuration list for PBXNativeTarget "DerbyScoreBoardSwiftTests" */;
+			buildPhases = (
+				EB4C42D0222B3C350024F304 /* Sources */,
+				EB4C42D1222B3C350024F304 /* Frameworks */,
+				EB4C42D2222B3C350024F304 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB4C42D6222B3C350024F304 /* PBXTargetDependency */,
+			);
+			name = DerbyScoreBoardSwiftTests;
+			productName = DerbyScoreBoardSwiftTests;
+			productReference = EB4C42D4222B3C350024F304 /* DerbyScoreBoardSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB4C42B5222B3C330024F304 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Nazario Ayala";
+				TargetAttributes = {
+					EB4C42BC222B3C330024F304 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					EB4C42D3222B3C350024F304 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = EB4C42BC222B3C330024F304;
+					};
+				};
+			};
+			buildConfigurationList = EB4C42B8222B3C330024F304 /* Build configuration list for PBXProject "DerbyScoreBoardSwift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EB4C42B4222B3C330024F304;
+			productRefGroup = EB4C42BE222B3C330024F304 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB4C42BC222B3C330024F304 /* DerbyScoreBoardSwift */,
+				EB4C42D3222B3C350024F304 /* DerbyScoreBoardSwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB4C42BB222B3C330024F304 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB4C42CE222B3C350024F304 /* LaunchScreen.storyboard in Resources */,
+				EB4C42CB222B3C350024F304 /* Assets.xcassets in Resources */,
+				EB4C42C6222B3C330024F304 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB4C42D2222B3C350024F304 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB4C42B9222B3C330024F304 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB4C42C3222B3C330024F304 /* ViewController.swift in Sources */,
+				EB4C42C1222B3C330024F304 /* AppDelegate.swift in Sources */,
+				EB4C42C9222B3C330024F304 /* DerbyScoreBoardSwift.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB4C42D0222B3C350024F304 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB4C42D9222B3C350024F304 /* DerbyScoreBoardSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EB4C42D6222B3C350024F304 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB4C42BC222B3C330024F304 /* DerbyScoreBoardSwift */;
+			targetProxy = EB4C42D5222B3C350024F304 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EB4C42C4222B3C330024F304 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB4C42C5222B3C330024F304 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EB4C42CC222B3C350024F304 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB4C42CD222B3C350024F304 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB4C42DB222B3C350024F304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EB4C42DC222B3C350024F304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB4C42DE222B3C350024F304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VSWD46ZU7R;
+				INFOPLIST_FILE = DerbyScoreBoardSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.niztech.DerbyScoreBoardSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EB4C42DF222B3C350024F304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VSWD46ZU7R;
+				INFOPLIST_FILE = DerbyScoreBoardSwift/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.niztech.DerbyScoreBoardSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EB4C42E1222B3C350024F304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VSWD46ZU7R;
+				INFOPLIST_FILE = DerbyScoreBoardSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.niztech.DerbyScoreBoardSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DerbyScoreBoardSwift.app/DerbyScoreBoardSwift";
+			};
+			name = Debug;
+		};
+		EB4C42E2222B3C350024F304 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VSWD46ZU7R;
+				INFOPLIST_FILE = DerbyScoreBoardSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.niztech.DerbyScoreBoardSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DerbyScoreBoardSwift.app/DerbyScoreBoardSwift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB4C42B8222B3C330024F304 /* Build configuration list for PBXProject "DerbyScoreBoardSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB4C42DB222B3C350024F304 /* Debug */,
+				EB4C42DC222B3C350024F304 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB4C42DD222B3C350024F304 /* Build configuration list for PBXNativeTarget "DerbyScoreBoardSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB4C42DE222B3C350024F304 /* Debug */,
+				EB4C42DF222B3C350024F304 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB4C42E0222B3C350024F304 /* Build configuration list for PBXNativeTarget "DerbyScoreBoardSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB4C42E1222B3C350024F304 /* Debug */,
+				EB4C42E2222B3C350024F304 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EB4C42C7222B3C330024F304 /* DerbyScoreBoardSwift.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EB4C42C8222B3C330024F304 /* DerbyScoreBoardSwift.xcdatamodel */,
+			);
+			currentVersion = EB4C42C8222B3C330024F304 /* DerbyScoreBoardSwift.xcdatamodel */;
+			path = DerbyScoreBoardSwift.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EB4C42B5222B3C330024F304 /* Project object */;
+}
