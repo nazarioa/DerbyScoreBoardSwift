@@ -27,7 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EB4C42BD222B3C330024F304 /* DerbyScoreBoardSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DerbyScoreBoardSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB4C42BD222B3C330024F304 /* DSBv2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSBv2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4C42C0222B3C330024F304 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB4C42C2222B3C330024F304 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EB4C42C5222B3C330024F304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		EB4C42BE222B3C330024F304 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EB4C42BD222B3C330024F304 /* DerbyScoreBoardSwift.app */,
+				EB4C42BD222B3C330024F304 /* DSBv2.app */,
 				EB4C42D4222B3C350024F304 /* DerbyScoreBoardSwiftTests.xctest */,
 			);
 			name = Products;
@@ -102,9 +102,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EB4C42BC222B3C330024F304 /* DerbyScoreBoardSwift */ = {
+		EB4C42BC222B3C330024F304 /* DSBv2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EB4C42DD222B3C350024F304 /* Build configuration list for PBXNativeTarget "DerbyScoreBoardSwift" */;
+			buildConfigurationList = EB4C42DD222B3C350024F304 /* Build configuration list for PBXNativeTarget "DSBv2" */;
 			buildPhases = (
 				EB4C42B9222B3C330024F304 /* Sources */,
 				EB4C42BA222B3C330024F304 /* Frameworks */,
@@ -114,9 +114,9 @@
 			);
 			dependencies = (
 			);
-			name = DerbyScoreBoardSwift;
+			name = DSBv2;
 			productName = DerbyScoreBoardSwift;
-			productReference = EB4C42BD222B3C330024F304 /* DerbyScoreBoardSwift.app */;
+			productReference = EB4C42BD222B3C330024F304 /* DSBv2.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EB4C42D3222B3C350024F304 /* DerbyScoreBoardSwiftTests */ = {
@@ -169,7 +169,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EB4C42BC222B3C330024F304 /* DerbyScoreBoardSwift */,
+				EB4C42BC222B3C330024F304 /* DSBv2 */,
 				EB4C42D3222B3C350024F304 /* DerbyScoreBoardSwiftTests */,
 			);
 		};
@@ -219,7 +219,7 @@
 /* Begin PBXTargetDependency section */
 		EB4C42D6222B3C350024F304 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EB4C42BC222B3C330024F304 /* DerbyScoreBoardSwift */;
+			target = EB4C42BC222B3C330024F304 /* DSBv2 */;
 			targetProxy = EB4C42D5222B3C350024F304 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -450,7 +450,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EB4C42DD222B3C350024F304 /* Build configuration list for PBXNativeTarget "DerbyScoreBoardSwift" */ = {
+		EB4C42DD222B3C350024F304 /* Build configuration list for PBXNativeTarget "DSBv2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EB4C42DE222B3C350024F304 /* Debug */,
