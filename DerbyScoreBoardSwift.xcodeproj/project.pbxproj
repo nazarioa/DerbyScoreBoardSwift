@@ -14,6 +14,7 @@
 		EB4C42CB222B3C350024F304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB4C42CA222B3C350024F304 /* Assets.xcassets */; };
 		EB4C42CE222B3C350024F304 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4C42CC222B3C350024F304 /* LaunchScreen.storyboard */; };
 		EB4C42D9222B3C350024F304 /* DerbyScoreBoardSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4C42D8222B3C350024F304 /* DerbyScoreBoardSwiftTests.swift */; };
+		EB7564D9222E3C270001BF33 /* DerbyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7564D8222E3C270001BF33 /* DerbyConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		EB4C42D4222B3C350024F304 /* DerbyScoreBoardSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DerbyScoreBoardSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4C42D8222B3C350024F304 /* DerbyScoreBoardSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerbyScoreBoardSwiftTests.swift; sourceTree = "<group>"; };
 		EB4C42DA222B3C350024F304 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB7564D8222E3C270001BF33 /* DerbyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerbyConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				EB4C42CC222B3C350024F304 /* LaunchScreen.storyboard */,
 				EB4C42CF222B3C350024F304 /* Info.plist */,
 				EB4C42C7222B3C330024F304 /* DerbyScoreBoardSwift.xcdatamodeld */,
+				EB7564D8222E3C270001BF33 /* DerbyConstants.swift */,
 			);
 			path = DerbyScoreBoardSwift;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB4C42C3222B3C330024F304 /* ViewController.swift in Sources */,
+				EB7564D9222E3C270001BF33 /* DerbyConstants.swift in Sources */,
 				EB4C42C1222B3C330024F304 /* AppDelegate.swift in Sources */,
 				EB4C42C9222B3C330024F304 /* DerbyScoreBoardSwift.xcdatamodeld in Sources */,
 			);
