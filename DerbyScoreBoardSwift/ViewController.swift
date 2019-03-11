@@ -31,6 +31,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var visitorTimeOutBtn: UIButton!
     
     
+    var jam: DerbyJam?
+    var playerA: DerbyPlayer?
+    var playerB: DerbyPlayer?
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        self.playerA = DerbyPlayer(name: "MathKilla", number: "Emc2")
+        self.playerB = DerbyPlayer(name: "JamTastik", number: "1")
+
+        if self.playerA != nil && self.playerB != nil {
+            self.jam = DerbyJam(self.playerA!, self.playerB!)
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"background")!)
