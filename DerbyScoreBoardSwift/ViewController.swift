@@ -51,6 +51,21 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    @IBAction func increaseJamScoreTouch(_ sender: UIButton) -> Void {
+        let senderName = sender.restorationIdentifier;
+        if senderName == "homePointIncrease" {
+            self.jam?.addOneTo(TeamDesignation.Home)
+        } else if senderName == "visitorPointIncrease" {
+            self.jam?.addOneTo(TeamDesignation.Visitor)
+        }
+    }
 
+    @IBAction func decreaseJamScoreTouch(_ sender: UIButton) -> Void {
+        let senderName = sender.restorationIdentifier;
+        if senderName == "homePointDecrease" {
+            self.jam?.subtractOneFrom(TeamDesignation.Home)
+        } else if senderName == "visitorPointDecrease" {
+            self.jam?.subtractOneFrom(TeamDesignation.Visitor)
+        }
+    }
 }
-
