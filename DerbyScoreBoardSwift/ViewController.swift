@@ -48,6 +48,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"background")!)
+        self.updateJammerScoreLbl(TeamDesignation.Home)
+        self.updateJammerScoreLbl(TeamDesignation.Visitor)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -55,8 +57,10 @@ class ViewController: UIViewController {
         let senderName = sender.restorationIdentifier;
         if senderName == "homePointIncrease" {
             self.jam?.addOneTo(TeamDesignation.Home)
+            self.updateJammerScoreLbl(TeamDesignation.Home)
         } else if senderName == "visitorPointIncrease" {
             self.jam?.addOneTo(TeamDesignation.Visitor)
+            self.updateJammerScoreLbl(TeamDesignation.Visitor)
         }
     }
 
@@ -64,8 +68,18 @@ class ViewController: UIViewController {
         let senderName = sender.restorationIdentifier;
         if senderName == "homePointDecrease" {
             self.jam?.subtractOneFrom(TeamDesignation.Home)
+            self.updateJammerScoreLbl(TeamDesignation.Home)
         } else if senderName == "visitorPointDecrease" {
             self.jam?.subtractOneFrom(TeamDesignation.Visitor)
+            self.updateJammerScoreLbl(TeamDesignation.Visitor)
+        }
+    }
+
+    func updateJammerScoreLbl(_ team: TeamDesignation) -> Void {
+        if team == TeamDesignation.Home {
+            self.homeJamScoreLbl.text = "\(self.jam?.homeJamScore ?? 0)";
+        } else if team == TeamDesignation.Visitor {
+            self.visitorJamScoreLbl.text = "\(self.jam?.visitorJamScore ?? 0)";
         }
     }
 }
