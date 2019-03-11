@@ -11,10 +11,10 @@ import UIKit
 class DerbyJam {
     var homeJamScore: Int = 0;
     var visitorJamScore: Int = 0;
-    
+
     var homeJammer: DerbyPlayer;
     var visitorJammer: DerbyPlayer;
-    
+
     var leadJammerStatus: TeamDesignation;
 
     init(_ homeJammer: DerbyPlayer, _ visitorJammer: DerbyPlayer) {
@@ -24,7 +24,7 @@ class DerbyJam {
         self.visitorJammer = visitorJammer;
         self.leadJammerStatus = TeamDesignation.None;
     }
-    
+
     func addOneTo(_ team: TeamDesignation) -> Void {
         if team == TeamDesignation.Home {
             self.homeJamScore += 1;
@@ -32,7 +32,7 @@ class DerbyJam {
             self.visitorJamScore += 1;
         }
     }
-    
+
     func subtractOneFrom(_ team: TeamDesignation) -> Void {
         if team == TeamDesignation.Home {
             if self.homeJamScore > 0 { self.homeJamScore -= 1; }
@@ -40,7 +40,7 @@ class DerbyJam {
             if self.visitorJamScore > 0 { self.visitorJamScore -= 1; }
         }
     }
-    
+
     func setJammer(player jammer: DerbyPlayer, for team: TeamDesignation) -> Void {
         if team == TeamDesignation.Home {
             self.homeJammer = jammer;

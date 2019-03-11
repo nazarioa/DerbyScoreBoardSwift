@@ -11,12 +11,12 @@ import UIKit
 class DerbyPlayer {
     var name: String;
     var number: String;
-    
+
     init?(name: String, number: String) {
         if name.isEmpty || number.isEmpty {
             return nil;
         }
-        
+
         self.name = name;
         self.number = number;
     }
