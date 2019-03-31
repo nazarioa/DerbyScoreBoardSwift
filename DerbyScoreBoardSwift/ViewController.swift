@@ -35,10 +35,16 @@ class ViewController: UIViewController {
     var playerA: DerbyPlayer?
     var playerB: DerbyPlayer?
 
+    var gameClockTimer: Timer?
+    var jamClockTimer: Timer?
+
+    var jamTimeLeft = 60
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.playerA = DerbyPlayer(name: "MathKilla", number: "Emc2")
         self.playerB = DerbyPlayer(name: "JamTastik", number: "1")
+        jamTimeLeft = 60
 
         if self.playerA != nil && self.playerB != nil {
             self.jam = DerbyJam(self.playerA!, self.playerB!)
@@ -51,6 +57,10 @@ class ViewController: UIViewController {
         self.updateJammerScoreLbl(TeamDesignation.Home)
         self.updateJammerScoreLbl(TeamDesignation.Visitor)
         // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        jamClockTimer?.invalidate()
     }
 
     @IBAction func increaseJamScoreTouch(_ sender: UIButton) -> Void {
@@ -81,5 +91,30 @@ class ViewController: UIViewController {
         } else if team == TeamDesignation.Visitor {
             self.visitorJamScoreLbl.text = "\(self.jam?.visitorJamScore ?? 0)";
         }
+    }
+
+    @IBAction func gameClockBtn(_ sender: UIButton) {
+        if gameClockTimer?.isValid ?? false {
+            gameClockTimer?.invalidate()
+        } else {
+            gameClockTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(gameClockFire), userInfo: nil, repeats: true)
+        }
+    }
+
+    @IBAction func jamClockBtn(_ sender: UIButton) {
+        if jamClockTimer?.isValid ?? false {
+            jamClockTimer?.invalidate()
+        } else {
+            jamClockTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(jamClockFire), userInfo: nil, repeats: true)
+        }
+    }
+
+    @objc func gameClockFire() -> Void {
+        print("Fire game clock!")
+    }
+
+    @objc func jamClockFire() -> Void {
+        print("Fire jam clock!")
+        jamTimeLeft = jamTimeLeft - 1
     }
 }

@@ -154,6 +154,9 @@
                                         <rect key="frame" x="145" y="0.0" width="75" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Start Jam" image="jamClock_start_a"/>
+                                        <connections>
+                                            <action selector="jamClockBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2XJ-Ky-ys9"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jam Clock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJX-To-Yj8">
                                         <rect key="frame" x="0.0" y="0.0" width="137" height="75"/>
@@ -173,6 +176,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Game Clock" image="gameClock_start"/>
+                                        <connections>
+                                            <action selector="gameClockBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t6P-hQ-xS6"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Clock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sYT-Il-WGT">
                                         <rect key="frame" x="83" y="0.0" width="153" height="75"/>
