@@ -114,7 +114,14 @@ class ViewController: UIViewController {
     }
 
     @objc func jamClockFire() -> Void {
-        print("Fire jam clock!")
         jamTimeLeft = jamTimeLeft - 1
+        jamClockLbl.text = formatTime(jamTimeLeft)
+    }
+
+    func formatTime(_ timeSeconds: Int) -> String {
+        let hours = Int(timeSeconds) / 3600
+        let minutes = Int(timeSeconds) / 60 % 60
+        let seconds = Int(timeSeconds) % 60
+        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
     }
 }
