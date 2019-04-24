@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var gameClockBtn: UIButton!
     @IBOutlet weak var jamClockBtn: UIButton!
+
     @IBOutlet weak var gameClockLbl: UILabel?
     @IBOutlet weak var jamClockLbl: UILabel?
     @IBOutlet weak var periodClockLbl: UILabel?
@@ -38,14 +39,17 @@ class ViewController: UIViewController {
 
     var gameClockTimer: Timer?
     var jamClockTimer: Timer?
+    var periodClockTimer: Timer?
 
     var jamTimeLeft = 60
+    var periodClockLeft = 20
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.playerA = DerbyPlayer(name: "MathKilla", number: "Emc2")
         self.playerB = DerbyPlayer(name: "JamTastik", number: "1")
         jamTimeLeft = 60
+        periodClockLeft = 20
 
         if self.playerA != nil && self.playerB != nil {
             self.jam = DerbyJam(self.playerA!, self.playerB!)

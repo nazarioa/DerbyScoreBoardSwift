@@ -235,6 +235,7 @@
                         <outlet property="homeTimeOutBtn" destination="G9y-Rr-KQV" id="Jfg-V4-6n6"/>
                         <outlet property="jamClockBtn" destination="jNy-Zb-UII" id="a71-jz-WIL"/>
                         <outlet property="jamClockLbl" destination="sJX-To-Yj8" id="39i-jv-uGU"/>
+                        <outlet property="periodClockLbl" destination="jut-dd-1NU" id="2En-7d-mY6"/>
                         <outlet property="visitorJamScoreLbl" destination="qOD-hJ-5Ej" id="mXX-nc-Zl2"/>
                         <outlet property="visitorJamTotalLbl" destination="Dgs-PL-o8X" id="Bxl-De-XUc"/>
                         <outlet property="visitorLeadBtn" destination="wgN-yh-R5e" id="jKg-Cu-Sb6"/>
