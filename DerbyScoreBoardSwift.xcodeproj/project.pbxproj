@@ -17,6 +17,7 @@
 		EB7564D5222E39A30001BF33 /* DerbyJam.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7564D4222E39A30001BF33 /* DerbyJam.swift */; };
 		EB7564D7222E3B640001BF33 /* DerbyPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7564D6222E3B640001BF33 /* DerbyPlayer.swift */; };
 		EB7564D9222E3C270001BF33 /* DerbyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7564D8222E3C270001BF33 /* DerbyConstants.swift */; };
+		EB7FCE9222703B59009595EB /* radioland.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB7FCE9122703B59009595EB /* radioland.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		EB7564D4222E39A30001BF33 /* DerbyJam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerbyJam.swift; sourceTree = "<group>"; };
 		EB7564D6222E3B640001BF33 /* DerbyPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerbyPlayer.swift; sourceTree = "<group>"; };
 		EB7564D8222E3C270001BF33 /* DerbyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerbyConstants.swift; sourceTree = "<group>"; };
+		EB7FCE9122703B59009595EB /* radioland.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = radioland.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		EB4C42BF222B3C330024F304 /* DerbyScoreBoardSwift */ = {
 			isa = PBXGroup;
 			children = (
+				EB66F859226C4B7D00EF877C /* Fonts */,
 				EB7564CF222E37A40001BF33 /* Models */,
 				EB4C42C0222B3C330024F304 /* AppDelegate.swift */,
 				EB4C42C2222B3C330024F304 /* ViewController.swift */,
@@ -105,6 +108,14 @@
 				EB4C42DA222B3C350024F304 /* Info.plist */,
 			);
 			path = DerbyScoreBoardSwiftTests;
+			sourceTree = "<group>";
+		};
+		EB66F859226C4B7D00EF877C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EB7FCE9122703B59009595EB /* radioland.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		EB7564CF222E37A40001BF33 /* Models */ = {
@@ -200,6 +211,7 @@
 				EB4C42CE222B3C350024F304 /* LaunchScreen.storyboard in Resources */,
 				EB4C42CB222B3C350024F304 /* Assets.xcassets in Resources */,
 				EB4C42C6222B3C330024F304 /* Main.storyboard in Resources */,
+				EB7FCE9222703B59009595EB /* radioland.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
