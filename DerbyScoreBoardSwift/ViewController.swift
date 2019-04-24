@@ -11,9 +11,10 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var gameClockBtn: UIButton!
     @IBOutlet weak var jamClockBtn: UIButton!
-    @IBOutlet weak var gameClockLbl: UILabel!
-    @IBOutlet weak var jamClockLbl: UILabel!
-    
+    @IBOutlet weak var gameClockLbl: UILabel?
+    @IBOutlet weak var jamClockLbl: UILabel?
+    @IBOutlet weak var periodClockLbl: UILabel?
+
     @IBOutlet weak var homeNameLbl: UILabel!
     @IBOutlet weak var homePlusBtn: UIButton!
     @IBOutlet weak var homeMinusBtn: UIButton!
