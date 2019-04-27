@@ -117,8 +117,7 @@ class ViewController: UIViewController, GameTimerDelegate {
                 self.jamClockTimer?.stopClock()
                 self.periodClockTimer?.startClock()
             } else {
-                self.jamClockTimer?.startClock()
-                self.periodClockTimer?.stopClock()
+                self.startJam()
             }
         }
     }
@@ -132,8 +131,7 @@ class ViewController: UIViewController, GameTimerDelegate {
             self.periodClockTimer?.startClock()
         } else if clockType == ClockType.Period {
             print("Period clock got to zero")
-            self.jamClockTimer?.stopClock()
-            self.jamClockTimer?.startClock()
+            self.startJam()
         }
     }
 
@@ -191,5 +189,17 @@ class ViewController: UIViewController, GameTimerDelegate {
         )
 
         self.periodClockLbl?.text = String(format: "%02d", self.periodClockTimer?.timerDuration() ?? 0)
+    }
+
+    private func startJam() -> Void {
+        self.periodClockTimer?.stopClock()
+        self.periodClockTimer?.resetClock()
+        self.jamClockTimer?.resetClock()
+        self.jamClockTimer?.startClock()
+        if !(self.boutClockTimer?.isRunning())! {
+            self.boutClockTimer?.startClock()
+        }
+        // Update UI (disable buttons / enable buttons)
+        // Update UI Tally up score and store it.
     }
 }
