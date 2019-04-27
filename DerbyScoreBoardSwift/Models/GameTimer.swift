@@ -20,10 +20,6 @@ class GameTimer {
     private var secondsLeft = 0
     private var durration = 0
     private var clockRunning = false
-
-    private var hours = 0
-    private var minutes = 0
-    private var seconds = 0
     private var timer: Timer?
 
     init?(_ clockType: ClockType, _ timerDuration: Int, _ delegate: GameTimerDelegate?) {
@@ -63,11 +59,9 @@ class GameTimer {
 
     func resetClock(_ seconds: Int? = nil) -> Void {
         print("Reset clock \(self.clockType) to \(seconds ?? self.durration)")
-        self.hours = 0
-        self.minutes = 0
-        self.seconds = 0
         self.secondsLeft = seconds ?? self.durration
         self.clockRunning = false
+        self.delegate?.timeHasChangedFor(self.clockType, time: secondsLeft)
     }
 
     func timerDuration() -> Int {
@@ -75,9 +69,6 @@ class GameTimer {
     }
 
     private func countdownTimer() {
-        self.hours = 0
-        self.minutes = 0
-        self.seconds = 0
         self.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(self.updateCounter), userInfo: nil, repeats: true)
         self.clockRunning = true
     }
