@@ -9,14 +9,14 @@
 import Foundation
 
 protocol GameTimerDelegate: class {
-    func clockReachedZero(_ clockName: String) -> Void
-    func timeHasChangedFor(_ clockName: String, time timeInSeconds: Int) -> Void
+    func clockReachedZero(_ clockType: ClockType) -> Void
+    func timeHasChangedFor(_ clockType: ClockType, time timeInSeconds: Int) -> Void
 }
 
 class GameTimer {
     weak var delegate: GameTimerDelegate?
 
-    private var clockName: String
+    private var clockType: ClockType
     private var secondsLeft = 0
     private var durration = 0
     private var clockRunning = false
@@ -26,8 +26,8 @@ class GameTimer {
     private var seconds = 0
     private var timer: Timer?
 
-    init?(_ clockName: String, _ timerDuration: Int, _ delegate: GameTimerDelegate?) {
-        self.clockName = clockName
+    init?(_ clockType: ClockType, _ timerDuration: Int, _ delegate: GameTimerDelegate?) {
+        self.clockType = clockType
         self.durration = timerDuration
         self.delegate = delegate
         resetClock()
@@ -39,14 +39,14 @@ class GameTimer {
 
     func startClock() -> Void {
         if !isRunning() {
-            print("Start clock \(self.clockName)")
+            print("Start clock \(self.clockType)")
             countdownTimer()
         }
     }
 
     func stopClock() -> Void {
         if self.isRunning() {
-            print("Stop clock \(self.clockName)")
+            print("Stop clock \(self.clockType)")
             self.pauseClock()
             self.resetClock()
         }
@@ -54,7 +54,7 @@ class GameTimer {
 
     func pauseClock() -> Void {
         if self.isRunning() {
-            print("Pause clock \(self.clockName)")
+            print("Pause clock \(self.clockType)")
             self.timer?.invalidate()
             self.timer = nil
             self.clockRunning = false
@@ -62,7 +62,7 @@ class GameTimer {
     }
 
     func resetClock(_ seconds: Int? = nil) -> Void {
-        print("Reset clock \(self.clockName) to \(seconds ?? self.durration)")
+        print("Reset clock \(self.clockType) to \(seconds ?? self.durration)")
         self.hours = 0
         self.minutes = 0
         self.seconds = 0
@@ -85,10 +85,10 @@ class GameTimer {
     @objc private func updateCounter() -> Void {
         if self.secondsLeft > 0 {
             self.secondsLeft = self.secondsLeft - 1
-            self.delegate?.timeHasChangedFor(self.clockName, time: self.secondsLeft)
+            self.delegate?.timeHasChangedFor(self.clockType, time: self.secondsLeft)
         } else {
             self.stopClock()
-            self.delegate?.clockReachedZero(self.clockName)
+            self.delegate?.clockReachedZero(self.clockType)
         }
     }
 

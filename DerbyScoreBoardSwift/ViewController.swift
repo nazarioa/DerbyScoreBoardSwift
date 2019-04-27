@@ -123,29 +123,33 @@ class ViewController: UIViewController, GameTimerDelegate {
         }
     }
 
-    func clockReachedZero(_ clockName: String) {
-        if clockName == "bout" {
+    func clockReachedZero(_ clockType: ClockType) {
+        if clockType == ClockType.Bout {
             print("Bout clock got to zero")
-        } else if clockName == "jam" {
+        } else if clockType == ClockType.Jam {
             print("Jam clock got to zero")
-        } else if clockName == "period" {
+            self.periodClockTimer?.resetClock()
+            self.periodClockTimer?.startClock()
+        } else if clockType == ClockType.Period {
             print("Period clock got to zero")
+            self.jamClockTimer?.stopClock()
+            self.jamClockTimer?.startClock()
         }
     }
 
     func timeHasChangedFor(_ clock: ClockType, time timeInSeconds: Int) {
         if clock == ClockType.Bout {
             self.gameClockLbl?.text = String(format: "%02d:%02d:%02d",
-                                            GameTimer.getHoursFromTimeIn(timeInSeconds),
-                                            GameTimer.getMinutesFromTimeIn(timeInSeconds),
-                                            GameTimer.getSecondsFromTimeIn(timeInSeconds)
+                                             GameTimer.getHoursFromTimeIn(timeInSeconds),
+                                             GameTimer.getMinutesFromTimeIn(timeInSeconds),
+                                             GameTimer.getSecondsFromTimeIn(timeInSeconds)
             )
         } else if clock == ClockType.Jam {
             self.jamClockLbl?.text = String(format: "%02d:%02d",
-                                           GameTimer.getMinutesFromTimeIn(timeInSeconds),
-                                           GameTimer.getSecondsFromTimeIn(timeInSeconds)
+                                            GameTimer.getMinutesFromTimeIn(timeInSeconds),
+                                            GameTimer.getSecondsFromTimeIn(timeInSeconds)
             )
-        } else if clockName == "period" {
+        } else if clock == ClockType.Period {
             if timeInSeconds < 10 {
                 self.periodClockLbl?.textColor = UIColor.red
             } else {
@@ -157,9 +161,9 @@ class ViewController: UIViewController, GameTimerDelegate {
 
     private func primeClocks() -> Void {
         if self.boutClockTimer == nil {
-            self.boutClockTimer = GameTimer.init("bout", ClockStartTimes.Bout.rawValue, self)
-            self.jamClockTimer = GameTimer.init("jam", ClockStartTimes.Jam.rawValue, self)
-            self.periodClockTimer = GameTimer.init("period", ClockStartTimes.Period.rawValue, self)
+            self.boutClockTimer = GameTimer.init(ClockType.Bout, ClockStartTimes.Bout.rawValue, self)
+            self.jamClockTimer = GameTimer.init(ClockType.Jam, ClockStartTimes.Jam.rawValue, self)
+            self.periodClockTimer = GameTimer.init(ClockType.Period, ClockStartTimes.Period.rawValue, self)
         } else {
             self.boutClockTimer?.pauseClock()
             self.boutClockTimer?.resetClock()
@@ -175,15 +179,15 @@ class ViewController: UIViewController, GameTimerDelegate {
     private func primeClockDisplays() -> Void {
         let boutDuration = self.boutClockTimer?.timerDuration() ?? 0
         self.gameClockLbl?.text = String(format: "%02d:%02d:%02d",
-                                        GameTimer.getHoursFromTimeIn(boutDuration),
-                                        GameTimer.getMinutesFromTimeIn(boutDuration),
-                                        GameTimer.getSecondsFromTimeIn(boutDuration)
+                                         GameTimer.getHoursFromTimeIn(boutDuration),
+                                         GameTimer.getMinutesFromTimeIn(boutDuration),
+                                         GameTimer.getSecondsFromTimeIn(boutDuration)
         )
 
         let jamDuration = self.jamClockTimer?.timerDuration() ?? 0
         self.jamClockLbl?.text = String(format: "%02d:%02d",
-                                       GameTimer.getMinutesFromTimeIn(jamDuration),
-                                       GameTimer.getSecondsFromTimeIn(jamDuration)
+                                        GameTimer.getMinutesFromTimeIn(jamDuration),
+                                        GameTimer.getSecondsFromTimeIn(jamDuration)
         )
 
         self.periodClockLbl?.text = String(format: "%02d", self.periodClockTimer?.timerDuration() ?? 0)

@@ -13,7 +13,7 @@ enum ModalMode: Equatable {
     case Add;
 }
 
-enum Clock: Equatable {
+enum ClockType: Equatable {
     case Bout;
     case Jam;
     case Period;
