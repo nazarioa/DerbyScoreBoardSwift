@@ -61,6 +61,7 @@ class ViewController: UIViewController, GameTimerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         primeClockDisplays()
+        jamClockBtn.addTarget(self, action: #selector(jamClockBtnDoubleTouch(_:event:)), for: UIControl.Event.touchDownRepeat)
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"background")!)
         self.updateJammerScoreLbl(TeamDesignation.Home)
         self.updateJammerScoreLbl(TeamDesignation.Visitor)
@@ -102,16 +103,23 @@ class ViewController: UIViewController, GameTimerDelegate {
     @IBAction func gameClockBtn(_ sender: UIButton) {
         if self.boutClockTimer?.isRunning() ?? false {
             self.boutClockTimer?.pauseClock()
+            self.jamClockTimer?.stopClock()
+            self.periodClockTimer?.stopClock()
         } else {
             self.boutClockTimer?.startClock()
         }
     }
 
-    @IBAction func jamClockBtn(_ sender: UIButton) {
-        if self.jamClockTimer?.isRunning() ?? false {
-            self.jamClockTimer?.pauseClock()
-        } else {
-            self.jamClockTimer?.startClock()
+    @IBAction func jamClockBtnDoubleTouch(_ sender: UIButton, event: UIEvent) {
+        let touch: UITouch = event.allTouches!.first!
+        if (touch.tapCount == 2) {
+            if self.jamClockTimer?.isRunning() ?? false {
+                self.jamClockTimer?.stopClock()
+                self.periodClockTimer?.startClock()
+            } else {
+                self.jamClockTimer?.startClock()
+                self.periodClockTimer?.stopClock()
+            }
         }
     }
 
