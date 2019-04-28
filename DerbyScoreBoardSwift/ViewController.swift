@@ -38,9 +38,8 @@ class ViewController: UIViewController, GameTimerDelegate {
     @IBOutlet weak var visitorLeadBtn: UIButton!
     @IBOutlet weak var visitorTimeOutBtn: UIButton!
 
+    private var theGame: DerbyBout?
     private var currentJam: DerbyJam?
-    var playerA: DerbyPlayer?
-    var playerB: DerbyPlayer?
 
     var boutClockTimer: GameTimer?
     var jamClockTimer: GameTimer?
@@ -49,11 +48,9 @@ class ViewController: UIViewController, GameTimerDelegate {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         primeClocks()
-        self.playerA = DerbyPlayer(name: "MathKilla", number: "Emc2")
-        self.playerB = DerbyPlayer(name: "JamTastik", number: "1")
 
-        if self.playerA != nil && self.playerB != nil {
-            self.jam = DerbyJam(self.playerA!, self.playerB!)
+        if self.theGame == nil {
+            self.theGame = DerbyBout()
         }
 
         if self.currentJam == nil {
