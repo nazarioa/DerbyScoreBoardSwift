@@ -221,22 +221,22 @@
                         <outlet property="gameClockBtn" destination="bG9-lW-Oxo" id="54b-oI-h5D"/>
                         <outlet property="gameClockLbl" destination="sYT-Il-WGT" id="2Ur-MH-qPK"/>
                         <outlet property="homeJamScoreLbl" destination="ztU-74-Y2P" id="hqs-j5-Shf"/>
-                        <outlet property="homeJamTotalLbl" destination="Tpd-qh-igl" id="lSW-1U-Cfu"/>
                         <outlet property="homeLeadBtn" destination="DMb-hv-gQy" id="iAh-Hv-cD8"/>
                         <outlet property="homeMinusBtn" destination="hXI-ym-HG0" id="O1q-Cz-URi"/>
                         <outlet property="homeNameLbl" destination="hoQ-cT-wxg" id="uwc-Mc-bgJ"/>
                         <outlet property="homePlusBtn" destination="BEo-nW-4XI" id="tey-4k-g8C"/>
                         <outlet property="homeTimeOutBtn" destination="G9y-Rr-KQV" id="Jfg-V4-6n6"/>
+                        <outlet property="homeTotalScoreLbl" destination="Tpd-qh-igl" id="QHn-Bb-Q7x"/>
                         <outlet property="jamClockBtn" destination="jNy-Zb-UII" id="a71-jz-WIL"/>
                         <outlet property="jamClockLbl" destination="sJX-To-Yj8" id="39i-jv-uGU"/>
                         <outlet property="periodClockLbl" destination="jut-dd-1NU" id="2En-7d-mY6"/>
                         <outlet property="visitorJamScoreLbl" destination="qOD-hJ-5Ej" id="mXX-nc-Zl2"/>
-                        <outlet property="visitorJamTotalLbl" destination="Dgs-PL-o8X" id="Bxl-De-XUc"/>
                         <outlet property="visitorLeadBtn" destination="wgN-yh-R5e" id="jKg-Cu-Sb6"/>
                         <outlet property="visitorMinusButton" destination="llC-7E-90N" id="LQU-HQ-Ge0"/>
                         <outlet property="visitorNameLbl" destination="rSd-De-UjY" id="jSN-9c-nrk"/>
                         <outlet property="visitorPlusButton" destination="Chr-eS-MF3" id="uk0-Ei-0gN"/>
                         <outlet property="visitorTimeOutBtn" destination="iNs-as-BeT" id="PSj-PN-rm0"/>
+                        <outlet property="visitorTotalScoreLbl" destination="Dgs-PL-o8X" id="TRp-nZ-Uy3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

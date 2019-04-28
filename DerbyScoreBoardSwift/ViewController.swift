@@ -25,16 +25,16 @@ class ViewController: UIViewController, GameTimerDelegate {
     @IBOutlet weak var homeNameLbl: UILabel!
     @IBOutlet weak var homePlusBtn: UIButton!
     @IBOutlet weak var homeMinusBtn: UIButton!
-    @IBOutlet weak var homeJamTotalLbl: UILabel!
     @IBOutlet weak var homeJamScoreLbl: UILabel?
+    @IBOutlet weak var homeTotalScoreLbl: UILabel?
     @IBOutlet weak var homeLeadBtn: UIButton!
     @IBOutlet weak var homeTimeOutBtn: UIButton!
     
     @IBOutlet weak var visitorNameLbl: UILabel!
     @IBOutlet weak var visitorPlusButton: UIButton!
     @IBOutlet weak var visitorMinusButton: UIButton!
-    @IBOutlet weak var visitorJamTotalLbl: UILabel!
     @IBOutlet weak var visitorJamScoreLbl: UILabel?
+    @IBOutlet weak var visitorTotalScoreLbl: UILabel?
     @IBOutlet weak var visitorLeadBtn: UIButton!
     @IBOutlet weak var visitorTimeOutBtn: UIButton!
 
@@ -65,6 +65,8 @@ class ViewController: UIViewController, GameTimerDelegate {
         super.viewDidLoad()
         primeClockDisplays()
         self.resetJamScoreLbls()
+        self.homeTotalScoreLbl?.text = "0"
+        self.visitorTotalScoreLbl?.text = "0"
         jamClockBtn.addTarget(self, action: #selector(jamClockBtnDoubleTouch(_:event:)), for: UIControl.Event.touchDownRepeat)
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"background")!)
         self.updateJammerScoreLbl(TeamDesignation.Home)
