@@ -25,20 +25,20 @@ class ViewController: UIViewController, GameTimerDelegate {
     @IBOutlet weak var homeNameLbl: UILabel!
     @IBOutlet weak var homePlusBtn: UIButton!
     @IBOutlet weak var homeMinusBtn: UIButton!
-    @IBOutlet weak var homeJamScoreLbl: UILabel!
     @IBOutlet weak var homeJamTotalLbl: UILabel!
+    @IBOutlet weak var homeJamScoreLbl: UILabel?
     @IBOutlet weak var homeLeadBtn: UIButton!
     @IBOutlet weak var homeTimeOutBtn: UIButton!
     
     @IBOutlet weak var visitorNameLbl: UILabel!
     @IBOutlet weak var visitorPlusButton: UIButton!
     @IBOutlet weak var visitorMinusButton: UIButton!
-    @IBOutlet weak var visitorJamScoreLbl: UILabel!
     @IBOutlet weak var visitorJamTotalLbl: UILabel!
+    @IBOutlet weak var visitorJamScoreLbl: UILabel?
     @IBOutlet weak var visitorLeadBtn: UIButton!
     @IBOutlet weak var visitorTimeOutBtn: UIButton!
 
-    var jam: DerbyJam?
+    private var currentJam: DerbyJam?
     var playerA: DerbyPlayer?
     var playerB: DerbyPlayer?
 
@@ -55,11 +55,16 @@ class ViewController: UIViewController, GameTimerDelegate {
         if self.playerA != nil && self.playerB != nil {
             self.jam = DerbyJam(self.playerA!, self.playerB!)
         }
+
+        if self.currentJam == nil {
+            self.currentJam = DerbyJam(DerbyPlayer(name: "MathKilla", number: "Emc2")!, DerbyPlayer(name: "JamTastik", number: "1")!)
+        }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         primeClockDisplays()
+        self.resetJamScoreLbls()
         jamClockBtn.addTarget(self, action: #selector(jamClockBtnDoubleTouch(_:event:)), for: UIControl.Event.touchDownRepeat)
         self.view.backgroundColor = UIColor(patternImage: UIImage(named:"background")!)
         self.updateJammerScoreLbl(TeamDesignation.Home)
@@ -72,10 +77,10 @@ class ViewController: UIViewController, GameTimerDelegate {
     @IBAction func increaseJamScoreTouch(_ sender: UIButton) -> Void {
         let senderName = sender.restorationIdentifier;
         if senderName == "homePointIncrease" {
-            self.jam?.addOneTo(TeamDesignation.Home)
+            self.currentJam?.addOneTo(TeamDesignation.Home)
             self.updateJammerScoreLbl(TeamDesignation.Home)
         } else if senderName == "visitorPointIncrease" {
-            self.jam?.addOneTo(TeamDesignation.Visitor)
+            self.currentJam?.addOneTo(TeamDesignation.Visitor)
             self.updateJammerScoreLbl(TeamDesignation.Visitor)
         }
     }
@@ -83,19 +88,19 @@ class ViewController: UIViewController, GameTimerDelegate {
     @IBAction func decreaseJamScoreTouch(_ sender: UIButton) -> Void {
         let senderName = sender.restorationIdentifier;
         if senderName == "homePointDecrease" {
-            self.jam?.subtractOneFrom(TeamDesignation.Home)
+            self.currentJam?.subtractOneFrom(TeamDesignation.Home)
             self.updateJammerScoreLbl(TeamDesignation.Home)
         } else if senderName == "visitorPointDecrease" {
-            self.jam?.subtractOneFrom(TeamDesignation.Visitor)
+            self.currentJam?.subtractOneFrom(TeamDesignation.Visitor)
             self.updateJammerScoreLbl(TeamDesignation.Visitor)
         }
     }
 
     func updateJammerScoreLbl(_ team: TeamDesignation) -> Void {
         if team == TeamDesignation.Home {
-            self.homeJamScoreLbl.text = "\(self.jam?.homeJamScore ?? 0)";
+            self.homeJamScoreLbl?.text = "\(self.currentJam?.homeJamScore ?? 0)";
         } else if team == TeamDesignation.Visitor {
-            self.visitorJamScoreLbl.text = "\(self.jam?.visitorJamScore ?? 0)";
+            self.visitorJamScoreLbl?.text = "\(self.currentJam?.visitorJamScore ?? 0)";
         }
     }
 
@@ -200,5 +205,10 @@ class ViewController: UIViewController, GameTimerDelegate {
         }
         // Update UI (disable buttons / enable buttons)
         // Update UI Tally up score and store it.
+    }
+
+    private func resetJamScoreLbls(_ home: Int = 0, _ visitor: Int = 0) -> Void  {
+        self.homeJamScoreLbl?.text = "\(home)"
+        self.visitorJamScoreLbl?.text = "\(visitor)"
     }
 }
