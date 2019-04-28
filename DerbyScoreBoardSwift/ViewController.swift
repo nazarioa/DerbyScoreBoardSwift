@@ -37,8 +37,7 @@ class ViewController: UIViewController, GameTimerDelegate {
     @IBOutlet weak var visitorJamTotalLbl: UILabel!
     @IBOutlet weak var visitorLeadBtn: UIButton!
     @IBOutlet weak var visitorTimeOutBtn: UIButton!
-    
-    
+
     var jam: DerbyJam?
     var playerA: DerbyPlayer?
     var playerB: DerbyPlayer?
