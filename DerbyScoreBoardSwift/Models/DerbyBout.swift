@@ -29,4 +29,8 @@ class DerbyBout {
         }
         return nil
     }
+
+    func numberOfJams() -> Int {
+        return self.jamLog?.count ?? 0
+    }
 }
