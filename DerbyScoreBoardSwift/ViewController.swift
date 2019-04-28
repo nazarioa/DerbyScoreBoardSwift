@@ -127,6 +127,7 @@ class ViewController: UIViewController, GameTimerDelegate {
             if self.jamClockTimer?.isRunning() ?? false {
                 self.jamClockTimer?.stopClock()
                 self.periodClockTimer?.startClock()
+                self.endJam()
             } else {
                 self.startJam()
             }
@@ -142,6 +143,7 @@ class ViewController: UIViewController, GameTimerDelegate {
             self.periodClockTimer?.startClock()
         } else if clockType == ClockType.Period {
             print("Period clock got to zero")
+            self.endJam()
             self.startJam()
         }
     }
@@ -212,6 +214,14 @@ class ViewController: UIViewController, GameTimerDelegate {
         }
         // Update UI (disable buttons / enable buttons)
         // Update UI Tally up score and store it.
+    }
+
+    private func endJam() -> Void {
+        self.resetJamScoreLbls(0, 0)
+        self.theGame?.addJam(self.currentJam!)
+        self.currentJam = DerbyJam(DerbyPlayer(name: "MathKilla", number: "Emc2")!, DerbyPlayer(name: "JamTastik", number: "1")!)
+        self.homeTotalScoreLbl?.text = "\(self.theGame?.calculateTotalScore(TeamDesignation.Home) ?? 0)"
+        self.visitorTotalScoreLbl?.text = "\(self.theGame?.calculateTotalScore(TeamDesignation.Visitor) ?? 0)"
     }
 
     private func resetJamScoreLbls(_ home: Int = 0, _ visitor: Int = 0) -> Void  {
