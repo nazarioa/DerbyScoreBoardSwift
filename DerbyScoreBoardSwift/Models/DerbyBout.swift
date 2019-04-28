@@ -20,4 +20,13 @@ class DerbyBout {
     func addJam(_ jam: DerbyJam) -> Void {
         self.jamLog?.append(jam)
     }
+
+    func calculateTotalScore(_ team: TeamDesignation) -> Int? {
+        if team == TeamDesignation.Home {
+            return self.jamLog?.reduce(0, {total, jam in total + jam.homeJamScore}) ?? 0
+        } else if team == TeamDesignation.Visitor {
+            return self.jamLog?.reduce(0, {total, jam in total + jam.visitorJamScore}) ?? 0
+        }
+        return nil
+    }
 }
