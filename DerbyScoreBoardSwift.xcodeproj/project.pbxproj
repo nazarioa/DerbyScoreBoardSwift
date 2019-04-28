@@ -19,6 +19,7 @@
 		EB7564D9222E3C270001BF33 /* DerbyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7564D8222E3C270001BF33 /* DerbyConstants.swift */; };
 		EB7FCE9222703B59009595EB /* radioland.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB7FCE9122703B59009595EB /* radioland.ttf */; };
 		EB7FCE942272BA44009595EB /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FCE932272BA43009595EB /* GameTimer.swift */; };
+		EB7FCE9622756145009595EB /* DerbyBout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FCE9522756145009595EB /* DerbyBout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		EB7564D8222E3C270001BF33 /* DerbyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerbyConstants.swift; sourceTree = "<group>"; };
 		EB7FCE9122703B59009595EB /* radioland.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = radioland.ttf; sourceTree = "<group>"; };
 		EB7FCE932272BA43009595EB /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
+		EB7FCE9522756145009595EB /* DerbyBout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerbyBout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 				EB7564D4222E39A30001BF33 /* DerbyJam.swift */,
 				EB7564D6222E3B640001BF33 /* DerbyPlayer.swift */,
 				EB7FCE932272BA43009595EB /* GameTimer.swift */,
+				EB7FCE9522756145009595EB /* DerbyBout.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			files = (
 				EB4C42C3222B3C330024F304 /* ViewController.swift in Sources */,
 				EB7564D7222E3B640001BF33 /* DerbyPlayer.swift in Sources */,
+				EB7FCE9622756145009595EB /* DerbyBout.swift in Sources */,
 				EB7564D9222E3C270001BF33 /* DerbyConstants.swift in Sources */,
 				EB7564D5222E39A30001BF33 /* DerbyJam.swift in Sources */,
 				EB7FCE942272BA44009595EB /* GameTimer.swift in Sources */,
