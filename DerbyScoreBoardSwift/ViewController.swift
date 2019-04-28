@@ -74,6 +74,10 @@ class ViewController: UIViewController, GameTimerDelegate {
     override func viewWillDisappear(_ animated: Bool) {}
 
     @IBAction func increaseJamScoreTouch(_ sender: UIButton) -> Void {
+        if !(self.jamClockTimer?.isRunning())! {
+            return;
+        }
+
         let senderName = sender.restorationIdentifier;
         if senderName == "homePointIncrease" {
             self.currentJam?.addOneTo(TeamDesignation.Home)
@@ -85,6 +89,10 @@ class ViewController: UIViewController, GameTimerDelegate {
     }
 
     @IBAction func decreaseJamScoreTouch(_ sender: UIButton) -> Void {
+        if !(self.jamClockTimer?.isRunning())! {
+            return;
+        }
+
         let senderName = sender.restorationIdentifier;
         if senderName == "homePointDecrease" {
             self.currentJam?.subtractOneFrom(TeamDesignation.Home)
