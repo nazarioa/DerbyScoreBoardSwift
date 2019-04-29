@@ -16,6 +16,7 @@ enum ClockStartTimes : Int {
 
 class ViewController: UIViewController, GameTimerDelegate {
     @IBOutlet weak var numberOfJamsLbl: UILabel?
+    @IBOutlet weak var externalScreensBtn: UIButton?
 
     @IBOutlet weak var gameClockBtn: UIButton!
     @IBOutlet weak var jamClockBtn: UIButton!
@@ -45,6 +46,7 @@ class ViewController: UIViewController, GameTimerDelegate {
 
     private var extScreen: UIScreen?
     private var spectatorWindow: UIWindow?
+    private var spectatorViewController: SpectatorScreenViewController?
 
     var boutClockTimer: GameTimer?
     var jamClockTimer: GameTimer?
@@ -136,6 +138,15 @@ class ViewController: UIViewController, GameTimerDelegate {
             } else {
                 self.startJam()
             }
+        }
+    }
+
+    @IBAction func connectExternalScreen() -> Void {
+        let availableScreens = UIScreen.screens
+        if availableScreens.count > 1 {
+            self.setupSpectatorScreen(availableScreens)
+        } else {
+            print("No external displays")
         }
     }
 
@@ -240,15 +251,14 @@ class ViewController: UIViewController, GameTimerDelegate {
             return
         }
 
-        self.spectatorWindow = UIWindow.init(frame: (self.extScreen?.bounds)!)
+        print("Setting up external screen")
+        let bounds = self.extScreen?.bounds
+        self.spectatorWindow = UIWindow.init(frame: bounds!)
         self.spectatorWindow?.screen = self.extScreen!
-        self.spectatorWindow?.isHidden = false
-    }
 
-    private func connectExternalScreen() -> Void {
-        let availableScreens = UIScreen.screens
-        if availableScreens.count > 1 {
-            self.setupSpectatorScreen(availableScreens)
-        }
+        self.spectatorViewController = SpectatorScreenViewController()
+        self.spectatorWindow?.rootViewController = self.spectatorViewController
+        self.spectatorWindow?.rootViewController?.view.bounds = bounds!
+        self.spectatorWindow?.isHidden = false
     }
 }

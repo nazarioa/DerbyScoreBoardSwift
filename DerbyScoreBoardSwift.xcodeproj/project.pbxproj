@@ -20,6 +20,7 @@
 		EB7FCE9222703B59009595EB /* radioland.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB7FCE9122703B59009595EB /* radioland.ttf */; };
 		EB7FCE942272BA44009595EB /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FCE932272BA43009595EB /* GameTimer.swift */; };
 		EB7FCE9622756145009595EB /* DerbyBout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FCE9522756145009595EB /* DerbyBout.swift */; };
+		EB7FCE992276B6A0009595EB /* SpectatorScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7FCE982276B6A0009595EB /* SpectatorScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		EB7FCE9122703B59009595EB /* radioland.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = radioland.ttf; sourceTree = "<group>"; };
 		EB7FCE932272BA43009595EB /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 		EB7FCE9522756145009595EB /* DerbyBout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerbyBout.swift; sourceTree = "<group>"; };
+		EB7FCE982276B6A0009595EB /* SpectatorScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectatorScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				EB4C42C2222B3C330024F304 /* ScoreBoardViewController.swift */,
+				EB7FCE982276B6A0009595EB /* SpectatorScreenViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				EB7FCE942272BA44009595EB /* GameTimer.swift in Sources */,
 				EB4C42C1222B3C330024F304 /* AppDelegate.swift in Sources */,
 				EB4C42C9222B3C330024F304 /* DerbyScoreBoardSwift.xcdatamodeld in Sources */,
+				EB7FCE992276B6A0009595EB /* SpectatorScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
