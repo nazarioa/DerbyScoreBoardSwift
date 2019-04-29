@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EB4C42C1222B3C330024F304 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4C42C0222B3C330024F304 /* AppDelegate.swift */; };
-		EB4C42C3222B3C330024F304 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4C42C2222B3C330024F304 /* ViewController.swift */; };
+		EB4C42C3222B3C330024F304 /* ScoreBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB4C42C2222B3C330024F304 /* ScoreBoardViewController.swift */; };
 		EB4C42C6222B3C330024F304 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB4C42C4222B3C330024F304 /* Main.storyboard */; };
 		EB4C42C9222B3C330024F304 /* DerbyScoreBoardSwift.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB4C42C7222B3C330024F304 /* DerbyScoreBoardSwift.xcdatamodeld */; };
 		EB4C42CB222B3C350024F304 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB4C42CA222B3C350024F304 /* Assets.xcassets */; };
@@ -35,7 +35,7 @@
 /* Begin PBXFileReference section */
 		EB4C42BD222B3C330024F304 /* DSBv2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSBv2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB4C42C0222B3C330024F304 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EB4C42C2222B3C330024F304 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EB4C42C2222B3C330024F304 /* ScoreBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardViewController.swift; sourceTree = "<group>"; };
 		EB4C42C5222B3C330024F304 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EB4C42C8222B3C330024F304 /* DerbyScoreBoardSwift.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DerbyScoreBoardSwift.xcdatamodel; sourceTree = "<group>"; };
 		EB4C42CA222B3C350024F304 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,10 +91,10 @@
 		EB4C42BF222B3C330024F304 /* DerbyScoreBoardSwift */ = {
 			isa = PBXGroup;
 			children = (
+				EB7FCE972276B63C009595EB /* Controller */,
 				EB66F859226C4B7D00EF877C /* Fonts */,
 				EB7564CF222E37A40001BF33 /* Models */,
 				EB4C42C0222B3C330024F304 /* AppDelegate.swift */,
-				EB4C42C2222B3C330024F304 /* ViewController.swift */,
 				EB4C42C4222B3C330024F304 /* Main.storyboard */,
 				EB4C42CA222B3C350024F304 /* Assets.xcassets */,
 				EB4C42CC222B3C350024F304 /* LaunchScreen.storyboard */,
@@ -131,6 +131,14 @@
 				EB7FCE9522756145009595EB /* DerbyBout.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		EB7FCE972276B63C009595EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EB4C42C2222B3C330024F304 /* ScoreBoardViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,7 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB4C42C3222B3C330024F304 /* ViewController.swift in Sources */,
+				EB4C42C3222B3C330024F304 /* ScoreBoardViewController.swift in Sources */,
 				EB7564D7222E3B640001BF33 /* DerbyPlayer.swift in Sources */,
 				EB7FCE9622756145009595EB /* DerbyBout.swift in Sources */,
 				EB7564D9222E3C270001BF33 /* DerbyConstants.swift in Sources */,

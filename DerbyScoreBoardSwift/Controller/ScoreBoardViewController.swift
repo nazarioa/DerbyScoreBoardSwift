@@ -43,6 +43,9 @@ class ViewController: UIViewController, GameTimerDelegate {
     private var theGame: DerbyBout?
     private var currentJam: DerbyJam?
 
+    private var extScreen: UIScreen?
+    private var spectatorWindow: UIWindow?
+
     var boutClockTimer: GameTimer?
     var jamClockTimer: GameTimer?
     var periodClockTimer: GameTimer?
@@ -214,8 +217,6 @@ class ViewController: UIViewController, GameTimerDelegate {
         if !(self.boutClockTimer?.isRunning())! {
             self.boutClockTimer?.startClock()
         }
-        // Update UI (disable buttons / enable buttons)
-        // Update UI Tally up score and store it.
         self.numberOfJamsLbl?.text = "\(self.theGame?.numberOfJams() ?? 0)"
     }
 
@@ -230,5 +231,24 @@ class ViewController: UIViewController, GameTimerDelegate {
     private func resetJamScoreLbls(_ home: Int = 0, _ visitor: Int = 0) -> Void  {
         self.homeJamScoreLbl?.text = "\(home)"
         self.visitorJamScoreLbl?.text = "\(visitor)"
+    }
+
+    private func setupSpectatorScreen(_ screens: Array<UIScreen>) -> Void  {
+        self.extScreen = screens[1]
+        if self.extScreen == nil {
+            print("No external screens connected")
+            return
+        }
+
+        self.spectatorWindow = UIWindow.init(frame: (self.extScreen?.bounds)!)
+        self.spectatorWindow?.screen = self.extScreen!
+        self.spectatorWindow?.isHidden = false
+    }
+
+    private func connectExternalScreen() -> Void {
+        let availableScreens = UIScreen.screens
+        if availableScreens.count > 1 {
+            self.setupSpectatorScreen(availableScreens)
+        }
     }
 }
