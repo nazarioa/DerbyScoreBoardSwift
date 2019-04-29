@@ -15,6 +15,8 @@ enum ClockStartTimes : Int {
 }
 
 class ViewController: UIViewController, GameTimerDelegate {
+    @IBOutlet weak var numberOfJamsLbl: UILabel?
+
     @IBOutlet weak var gameClockBtn: UIButton!
     @IBOutlet weak var jamClockBtn: UIButton!
 
@@ -214,6 +216,7 @@ class ViewController: UIViewController, GameTimerDelegate {
         }
         // Update UI (disable buttons / enable buttons)
         // Update UI Tally up score and store it.
+        self.numberOfJamsLbl?.text = "\(self.theGame?.numberOfJams() ?? 0)"
     }
 
     private func endJam() -> Void {

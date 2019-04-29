@@ -212,6 +212,13 @@
                                     </view>
                                 </subviews>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="number_of_jams" text="No. Of Jams" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHd-SQ-Qwn">
+                                <rect key="frame" x="216" y="20" width="104" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -229,6 +236,7 @@
                         <outlet property="homeTotalScoreLbl" destination="Tpd-qh-igl" id="QHn-Bb-Q7x"/>
                         <outlet property="jamClockBtn" destination="jNy-Zb-UII" id="a71-jz-WIL"/>
                         <outlet property="jamClockLbl" destination="sJX-To-Yj8" id="39i-jv-uGU"/>
+                        <outlet property="numberOfJamsLbl" destination="uHd-SQ-Qwn" id="0zE-sB-zKj"/>
                         <outlet property="periodClockLbl" destination="jut-dd-1NU" id="2En-7d-mY6"/>
                         <outlet property="visitorJamScoreLbl" destination="qOD-hJ-5Ej" id="mXX-nc-Zl2"/>
                         <outlet property="visitorLeadBtn" destination="wgN-yh-R5e" id="jKg-Cu-Sb6"/>
